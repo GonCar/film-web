@@ -1,0 +1,18 @@
+
+    <div class="film-Element">
+      <img height="300" width="200" class="poster" [src]="film.poster" />
+      <div class="titleAndActors">
+        <div class="panel panel-default">
+            <h3>  {{ film.title }} </h3>
+          </div>
+          <p> {{ film.actors }}</p>
+      <div class="Date-Rate">
+        <p> {{ film.year }}</p>
+        <p> {{ film.rate }}</p>
+      </div>
+      <p> {{ film.plot }}</p>
+        <!-- <button type="button" name="favorite" class="btn btn-primary" (click)="addToFavorites(film.id)">Add to favorites</button> -->
+      </div>
+      <br>
+      <a [routerLink]="['/films']"> <i id="arrow-back" class="fa fa-arrow-left"></i></a>
+    </div>

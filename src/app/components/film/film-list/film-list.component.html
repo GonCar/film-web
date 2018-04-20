@@ -1,0 +1,22 @@
+<div class="films-list">
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <label for="term"></label>
+      <div class="navbar">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search Film" (keyup)="searchFilm($event)" [(ngModel)]="searchTerm" name="search">
+      <a [routerLink]="['/create']" class="btn btn-success">create</a>
+    </div>
+
+   </form>
+    </nav>
+    <br>
+<ul *ngFor="let film of films | filter: searchTerm">
+  <div class="films-item">
+
+  <h3> {{ film.title }} </h3>
+  <img height="300" width="200" class="poster" [src]="film.poster" />
+  <a [routerLink]="['/films', film.id]"> Film info </a>
+  </div>
+</ul>
+
+</div>

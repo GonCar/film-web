@@ -1,0 +1,16 @@
+.films-list {
+  padding-bottom: 20px;
+  color: grey;
+}
+.navbar {
+  padding-left: 25px;
+}
+.films-item {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+}
+.create-button {
+  padding-left: 60px;
+}

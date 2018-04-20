@@ -1,0 +1,23 @@
+.panel-default{
+  width: 500px;
+}
+.poster{
+ padding-top: 20px;
+}
+.titleAndActors{
+  display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+
+}
+.Date-Rate{
+  display: inline-block;
+
+}
+
+#arrow-back {
+  padding-top: 50px;
+  font-size: 20px;
+  width: 1000px;
+  text-align: center;
+}

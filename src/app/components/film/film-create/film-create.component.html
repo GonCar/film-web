@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+  <form (ngSubmit)="onSubmitCreate(createForm)" #createForm="ngForm">
+    <div class="create-film">
+
+    <input type="text" name="title" class="form-control" placeholder="Title" [(ngModel)]="film.title" #title="ngModel" required
+            title>
+
+    <input type="number" name="year" class="form-control" placeholder="Year" [(ngModel)]="film.year" #year="ngModel" required
+            year>
+
+    <input type="text" name="genres" class="form-control" placeholder="Genres" [(ngModel)]="film.genre" #genres="ngModel" required
+            genre>
+
+    <input type="text" name="type" class="form-control" placeholder="Type" [(ngModel)]="film.type" #type="ngModel" required
+            type>
+
+    <input type="text" name="plot" class="form-control" id="plotId" rows="3" placeholder="Plot" [(ngModel)]="film.plot" #plot="ngModel" required
+            plot>
+
+    <input type="text" name="actors" class="form-control" placeholder="Actors" [(ngModel)]="film.actors" #actors="ngModel" required
+            actors>
+    <input type="text" id="file" name="file" class="form-control" placeholder="Poster" [(ngModel)]="film.poster" #poster='ngModel' required
+            poster>
+
+
+      <div class="form-group" class="has-error" *ngIf="apiError">
+        <label class="control-label">
+          {{ apiError }}
+        </label>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-block btn-success" >Create</button>
+      </div>
+      <br>
+        <a [routerLink]="['/films']"> <i id="arrow-back" class="fa fa-arrow-left btm-succes"></i></a>
+    </div>
+    </form>
+</div>
+    </div>
+</div>
